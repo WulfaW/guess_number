@@ -1,0 +1,28 @@
+using System;
+
+namespace guess_number
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Random rnd = new Random();
+            int randomnumber = rnd.Next(1, 10);
+            int enterednumber = 0;
+            Console.WriteLine("Welcome to number guess game");
+            Console.Write("Enter 1-10 number: ");
+            enterednumber = Convert.ToInt32(Console.ReadLine());
+            if (enterednumber == randomnumber)
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("Wrong");
+                Console.WriteLine("True Number : {0}",randomnumber);
+            }
+
+
+        }
+    }
+}
